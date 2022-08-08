@@ -1,0 +1,12 @@
+{
+  "content_root": ".",
+  "dns_port": 53,
+  "dns_address": "0.0.0.0",
+  "upstream_servers": [
+    "udp://8.8.8.8:53",
+    "udp://8.8.4.4:53",
+    "udp://94.140.14.14:53",
+    "udp://94.140.15.15:53"
+  ],
+  "upstream_timeout": 300
+}
