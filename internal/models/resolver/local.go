@@ -6,7 +6,7 @@ import (
 	"github.com/miekg/dns"
 	loggerpkg "github.com/reneManqueros/logger"
 	"io/ioutil"
-	"ratatosk/internal/models/config"
+	"ratatoskr/internal/models/config"
 	"strings"
 )
 

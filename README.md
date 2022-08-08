@@ -1,4 +1,4 @@
-# Ratatosk
+# Ratatoskr
 ## _DNS cache + upstreamer_
 
 ## Features

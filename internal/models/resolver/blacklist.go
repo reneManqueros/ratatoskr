@@ -6,7 +6,7 @@ import (
 	loggerpkg "github.com/reneManqueros/logger"
 	"io/ioutil"
 	"log"
-	"ratatosk/internal/models/config"
+	"ratatoskr/internal/models/config"
 	"strings"
 )
 

@@ -2,8 +2,8 @@ package cmd
 
 import (
 	"github.com/spf13/cobra"
-	"ratatosk/internal/models/resolver"
-	"ratatosk/internal/servers"
+	"ratatoskr/internal/models/resolver"
+	"ratatoskr/internal/servers"
 )
 
 var serveCmd = &cobra.Command{

@@ -5,8 +5,8 @@ import (
 	"fmt"
 	loggerpkg "github.com/reneManqueros/logger"
 	"log"
-	"ratatosk/cmd"
-	"ratatosk/internal/models/config"
+	"ratatoskr/cmd"
+	"ratatoskr/internal/models/config"
 	"runtime/debug"
 )
 

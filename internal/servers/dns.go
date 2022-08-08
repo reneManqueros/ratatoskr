@@ -5,8 +5,8 @@ import (
 	"github.com/miekg/dns"
 	loggerpkg "github.com/reneManqueros/logger"
 	"net/url"
-	"ratatosk/internal/models/config"
-	"ratatosk/internal/models/resolver"
+	"ratatoskr/internal/models/config"
+	"ratatoskr/internal/models/resolver"
 	"time"
 )
 

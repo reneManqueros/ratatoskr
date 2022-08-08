@@ -7,7 +7,7 @@ import (
 	loggerpkg "github.com/reneManqueros/logger"
 	"log"
 	"net/url"
-	"ratatosk/internal/models/config"
+	"ratatoskr/internal/models/config"
 	"strings"
 	"time"
 )

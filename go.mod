@@ -1,4 +1,4 @@
-module ratatosk
+module ratatoskr
 
 go 1.18
 
