@@ -1,29 +1,28 @@
-# README #
+# Ratatosk
+## _DNS cache + upstreamer_
 
-This README would normally document whatever steps are necessary to get your application up and running.
+## Features
 
-### What is this repository for? ###
+- Locally block DNS queries
+- Add custom entries
+- Fast!
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
-### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+## Installation
 
-### Contribution guidelines ###
+```sh
+go build .
+```
 
-* Writing tests
-* Code review
-* Other guidelines
+## Configuration
 
-### Who do I talk to? ###
+Edit config.json:
 
-* Repo owner or admin
-* Other community or team contact
+| Setting | Description |
+| ------ | ------ |
+| content_root | base path for the local blocklist/resolves folder |
+| dns_port | Listen port (must be 53 for production usage |
+| dns_address | Listen address |
+| upstream_servers | Servers to use for upstreaming |
+| upstream_timeout | Milliseconds before triggering an upstream timeout  |
