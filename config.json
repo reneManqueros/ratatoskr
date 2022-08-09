@@ -1,6 +1,6 @@
 {
   "content_root": ".",
-  "dns_port": 53,
+  "dns_port": 5322,
   "dns_address": "0.0.0.0",
   "upstream_servers": [
     "udp://8.8.8.8:53",

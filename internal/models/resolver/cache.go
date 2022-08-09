@@ -28,8 +28,17 @@ func (resolver *Resolver) InCache(query string) (dns.Msg, bool) {
 func (resolver *Resolver) parseCache(m *dns.Msg) Response {
 	for _, q := range m.Question {
 		switch q.Qtype {
-		case dns.TypeA:
 		case dns.TypeCNAME:
+			query := strings.TrimSuffix(q.Name, ".")
+			if value, ok := resolver.InCache(query); ok {
+				m.Answer = value.Answer
+				return Response{
+					HasAnswer: true,
+					Query:     query,
+					Status:    RESPONSECACHED,
+				}
+			}
+		case dns.TypeA:
 			query := strings.TrimSuffix(q.Name, ".")
 			if value, ok := resolver.InCache(query); ok {
 				m.Answer = value.Answer

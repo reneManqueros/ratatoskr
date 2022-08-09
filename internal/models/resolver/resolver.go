@@ -73,15 +73,22 @@ func (resolver *Resolver) handle(buf []byte, addr net.Addr, conn *net.UDPConn) {
 		resolver.parseCache,
 		resolver.parseLocal,
 		resolver.parseBlacklist,
-		resolver.parseUpstream,
 	}
-
+	isResolved := false
 	for _, handler := range handlers {
-		response := handler(msg)
-		if response.HasAnswer == true {
+		if response := handler(msg); response.HasAnswer == true {
 			resolver.SetCache(response.Query, *msg)
 			response.Client = addr.String()
+			isResolved = true
 			break
+		}
+	}
+
+	if isResolved == false {
+		if response := resolver.parseUpstream(msg); response.HasAnswer == true {
+			loggerpkg.Logger{}.Debug("went to upstream")
+			resolver.SetCache(response.Query, *msg)
+			response.Client = addr.String()
 		}
 	}
 

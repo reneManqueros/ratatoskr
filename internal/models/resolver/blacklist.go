@@ -16,7 +16,6 @@ func (resolver *Resolver) parseBlacklist(m *dns.Msg) Response {
 	for _, q := range m.Question {
 		switch q.Qtype {
 		case dns.TypeA:
-		case dns.TypeCNAME:
 			query := strings.TrimSuffix(q.Name, ".")
 			if _, ok := LocalBlackList[query]; ok {
 				rr, err := dns.NewRR(fmt.Sprintf("%s A %s", q.Name, "255.255.255.0"))
